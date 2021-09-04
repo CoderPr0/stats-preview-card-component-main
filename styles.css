@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+section {
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    border-radius: 11px;
+    width: 1064px;
+    margin: 10% auto;
+    overflow: hidden;
+}
+
+/* ----main---- */
+main {
+    padding: 6%;
+}
+
+h1, .stats {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 7%;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+main > p {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 90%;
+    margin-bottom: 20%;
+}
+
+/* ----all stats---- */
+.all-stats {
+    display: flex;
+}
+
+.companies, .templates {
+    margin-right: 17%;
+}
+
+.stats {
+    font-size: 24px;
+}
+
+div > p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 13px;
+}
+
+/* ----images---- */
+section > div {
+    position: relative;
+}
+
+.mobile-img {
+    display: none;
+}
+
+.overlay {
+    background: hsl(277, 64%, 61%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+
+
+/* -------FOR SCREENS BELOW 1140px------- */
+@media (max-width: 1140px) {
+    section {
+        flex-direction: column-reverse;
+        width: 540px;
+        margin: 5% auto;
+    }
+
+    /* ----main---- */
+    main {
+        text-align: center;
+        padding: 5%;
+    }
+
+    h1, main > p, .all-stats {
+        margin: 0 auto;
+    }
+
+    h1 {
+        width: 80%;
+        margin-bottom: 5%;
+
+    }
+
+    main > p {
+        width: 75%;
+        margin-bottom: 5%;
+    }
+
+    /* ----all stats---- */
+    .all-stats {
+        justify-content: center;
+    }
+
+    .companies, .templates {
+        margin-right: 14%;
+    }
+}
+
+
+
+/* -------FOR SCREENS BELLOW 680px------- */
+@media (max-width: 680px) {
+    section {
+        width: 300px;
+    }
+
+    /* ----main---- */
+    h1 {
+        font-size: 22px;
+    }
+    main > p {
+        font-size: 11.5px;
+        margin-bottom: 30px;
+    }
+
+    /* ----all stats---- */
+    .all-stats {
+        display: block;
+    }
+    
+    .all-stats > div {
+        margin-right: 0;
+    }
+    
+    .companies, .templates {
+        margin-bottom: 30px;
+    }
+
+    /* ----images---- */
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        height: 220px;
+    }
+}

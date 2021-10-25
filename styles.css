@@ -1,26 +1,28 @@
 * {
-    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
     padding: 0;
+    border: none;
+    margin: 0;
 }
 
 body {
     background-color: hsl(233, 47%, 7%);
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
-section {
+main {
     background-color: hsl(244, 38%, 16%);
     display: flex;
-    border-radius: 11px;
     width: 1064px;
-    margin: 10% auto;
     overflow: hidden;
+    
+    border-radius: 1em;
+    margin: 10em auto 6em;
 }
 
-/* ----main---- */
-main {
-    padding: 6%;
+/* ----header---- */
+header {
+    padding: 4em 3.6em;
 }
 
 h1, .stats {
@@ -30,48 +32,44 @@ h1, .stats {
 
 h1 {
     font-size: 36px;
-    margin-bottom: 7%;
+    margin-bottom: 0.6em;
 }
 
 span {
     color: hsl(277, 64%, 61%);
 }
 
-main > p {
+header > p {
     font-size: 15px;
     color: hsla(0, 0%, 100%, 0.75);
-    width: 90%;
-    margin-bottom: 20%;
+    line-height: 1.6em;
+    width: 24em;
+    margin-bottom: 5.4em;
 }
 
 /* ----all stats---- */
 .all-stats {
     display: flex;
-}
-
-.companies, .templates {
-    margin-right: 17%;
+    gap: 2.4em;
 }
 
 .stats {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 div > p {
     color: hsla(0, 0%, 100%, 0.6);
-    font-size: 13px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 /* ----images---- */
-section > div {
+main > div {
     position: relative;
 }
 
-.mobile-img {
-    display: none;
-}
-
-.overlay {
+main > div::after{
+    content: url();
     background: hsl(277, 64%, 61%);
     position: absolute;
     top: 0;
@@ -81,43 +79,45 @@ section > div {
     mix-blend-mode: multiply;
 }
 
+.mobile-img {
+    display: none;
+}
+
+
 
 /* -------FOR SCREENS BELOW 1140px------- */
 @media (max-width: 1140px) {
-    section {
+    main {
         flex-direction: column-reverse;
         width: 540px;
-        margin: 5% auto;
     }
 
-    /* ----main---- */
-    main {
+    /* ----header---- */
+    header {
         text-align: center;
-        padding: 5%;
+        padding: 2em 4em;
     }
 
-    h1, main > p, .all-stats {
+    h1, header > p, .all-stats {
         margin: 0 auto;
     }
 
     h1 {
-        width: 80%;
-        margin-bottom: 5%;
+        margin-bottom: 0.5em;
 
     }
 
-    main > p {
-        width: 75%;
-        margin-bottom: 5%;
+    header > p {
+        width: 80%;
+        margin-bottom: 3.2em;
     }
 
     /* ----all stats---- */
     .all-stats {
         justify-content: center;
     }
-
-    .companies, .templates {
-        margin-right: 14%;
+    .all-stats{
+        gap: 3em;
     }
 }
 
@@ -125,30 +125,34 @@ section > div {
 
 /* -------FOR SCREENS BELLOW 680px------- */
 @media (max-width: 680px) {
-    section {
+    main {
         width: 300px;
+        margin-top: 4em;
     }
 
-    /* ----main---- */
-    h1 {
-        font-size: 22px;
+    /* ----header---- */
+    header{
+        padding: 2em 1.2em;
     }
-    main > p {
-        font-size: 11.5px;
-        margin-bottom: 30px;
+    h1 {
+        font-size: 28px;
+        margin-bottom: 0.8em;
+    }
+    header > p {
+        font-size: 12;
+        width: 100%;
     }
 
     /* ----all stats---- */
     .all-stats {
-        display: block;
+        flex-direction: column;
+        gap: 1.6em;
     }
-    
-    .all-stats > div {
-        margin-right: 0;
+    .stats{
+        font-size: 24px;
     }
-    
-    .companies, .templates {
-        margin-bottom: 30px;
+    div > p{
+        font-size: 16px;
     }
 
     /* ----images---- */
